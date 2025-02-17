@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'chat_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _idController = TextEditingController();
@@ -8,7 +7,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.shade200,
+      backgroundColor: Colors.black,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -20,7 +19,7 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blue.shade400,
+                  color: Colors.green.shade400,
                 ),
               ),
               const SizedBox(height: 20),
@@ -59,10 +58,7 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ChatScreen()),
-                        );
+                        Navigator.pushNamed(context, '/chat'); // 네임드 라우트로 이동
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green.shade400,
